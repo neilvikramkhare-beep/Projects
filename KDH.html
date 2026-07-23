@@ -1,0 +1,206 @@
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+const ServiceCard = ({ title, description }) => (
+  <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+    <div className="card h-100 shadow-sm">
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text" style={{ whiteSpace: 'pre-line' }}>
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+);
+function App() 
+{
+  const [appointment, setAppointment] = useState({ name: '', date: '' });
+  const handleBooking = (e) => {
+    e.preventDefault();
+    alert(
+      `Appointment requested for ${appointment.name} on ${appointment.date}. Thank you for choosing Khare Dental Home!`
+    );
+  };
+  return (
+    <div>
+      {}
+      <header className="bg-primary text-white text-center py-4">
+        <h1>Khare Dental Home</h1>
+        <p>Your Trusted Smile Partner</p>
+      </header>
+      {}
+      <section className="container my-5">
+        <h2 className="text-center mb-4">Our Services</h2>
+        <div className="row">
+          <ServiceCard title="Root Canal" description="A root canal is an important dental procedure designed to save a tooth that has been extensively damaged due to decaying, cracking or any injuries. The procedure involves carefully removing the inflamed pulp- the soft tissue containing nerves and vessels- from the pulp chamber and root canals. After thorough cleaning and disinfection, we meticulously fill and seal the space to avoid any further infection, restoring the tooth’s integrity.You should consider a root canal if you are experiencing persistent tooth ache, especially when chewing or applying pressure, or even if you have prolonged sensitivity to extreme temperatures. Other key symptoms include noticeable swelling and tenderness in the surrounding gums, a recurring bump on the gums, or an obvious discolouration of the tooth. These signs indicate a significant infection or inflammation that, if left untreated, can lead to tooth loss or even more complex issues.A root canal effectively eliminates the source of infection and inflammation, thereby relieving severe pain and preventing the spread of the infection to other parts of the mouth. This procedure allows preservation of the natural tooth- ensuring that your natural bite and chewing efficiency is maintained.
+Ultimately, a successful root canal restores tooth health and function, keeping it intact and comfortable for years to come." />
+          <ServiceCard title="Dental Fillings" description="Repairs cavities and fractures using tooth-coloured materials, restoring strength, appearance, and preventing further decay.
+Dental filling is a common restorative procedure used to repair teeth that have been damaged due to decay, cracks or fractures. 
+The affected part of the tooth is removed and the remaining cavity is cleaned and filled with a durable material such as (tooth-coloured) composite resin, amalgam or porcelain.
+It restores tooth appearance, function and health, preventing further decay.
+You should consider getting a dental filling if you have a cavity, which might be indicated by mild to sharp pain when eating or drinking sweet, hot, or cold foods, or by persistent sensitivity. Sometimes, a visible hole or dark spot on your tooth, or a rough edge that your tongue can feel, also signifies the need for a filling. Prompt treatment is important, as untreated cavities can grow larger, leading to more severe pain, infection, or even tooth loss.Dental fillings effectively stop the progression of tooth decay, preventing it from spreading deeper into the tooth and potentially reaching the nerve. By restoring the tooth's original shape and strength, fillings eliminate pain and sensitivity, allowing you to chew comfortably and maintain proper oral function.
+Furthermore, a well-placed filling protects the tooth from further damage and helps preserve your natural smile for many years." />
+          <ServiceCard title="Dental Implants" description="Permanent replacement for missing teeth using titanium implants, restoring chewing ability, facial structure, and confidence.
+Dental implants are a cutting-edge and highly effective solution for replacing missing teeth,offering a strong and durable foundation for artificial teeth that look,feel,and function like natural ones. An implant consists of a small, biocompatible titanium post that is surgically placed into the jawbone beneath the gum line, where it acts as an artificial tooth root. Once integrated with the bone, a custom-made crown, bridge, or denture is securely attached to this post.You should consider dental implants if you have one or more missing teeth, whether from injury, decay, gum disease, or simply extraction. Implants are also an excellent option if you are dissatisfied with traditional dentures or bridges and are looking for a more stable, long-term replacement solution that doesn't affect adjacent healthy teeth. They are ideal for individuals seeking to restore full chewing ability, clear speech, and a confident smile.Dental implants provide unmatched stability and comfort by fusing directly with your jawbone, which helps prevent bone loss that typically occurs after tooth extraction, thereby preserving your facial structure. They restore your ability to eat all types of food without discomfort and speak clearly, significantly improving your quality of life. Unlike other tooth replacement options, implants do not require grinding down adjacent healthy teeth, offering a highly durable and aesthetically pleasing solution that can last a lifetime with proper care
+Done with the help of Dr Rahul Kale.
+Dental implants are artificial tooth roots, typically titanium screws, surgically placed in the jawbone to provide a stable base for replacement teeth (crowns, bridges, or dentures).
+They function like natural tooth roots, stimulating the jawbone and preventing bone loss, offering a durable, natural-looking solution for missing teeth that improves chewing, speech, and confidence, requiring healthy gums and bone for success.
+The process involves placing the implant, allowing it to fuse with the bone (osseointegration), and then attaching an abutment (connector) and the final artificial tooth." />
+          <ServiceCard title="Crowns and bridges" description="Strengthen damaged teeth and replace missing teeth for function and natural aesthetics.
+Dental Crowns are custom-made caps designed to completely cover a damaged or weakened tooth, restoring its shape, size, strength, and appearance.
+They are typically used when a tooth has extensive decay, a large filling, or is fractured. Dental Bridges are used to bridge the gap created by one or more missing teeth, consisting of two or more crowns for the teeth on either side of the gap (abutment teeth) with a false tooth (pontic) in between.
+Both are permanently cemented onto existing teeth or implants.
+You should consider teeth bleaching if your teeth have become discolored or stained over time due to factors such as coffee, tea, red wine, tobacco use, or simply the natural aging process. If you feel self-conscious about the shade of your teeth or desire a more vibrant smile for an upcoming special event, professional teeth bleaching can be an excellent option. Its ideal for individuals looking for a noticeable yet natural improvement in their smile s brightness. Professional teeth bleaching significantly improves the aesthetics of your smile by visibly lightening the shade of your teeth, often by several shades in a single session. This procedure boosts your self-confidence by providing a brighter, more youthful appearance and can even make you look more approachable and professional.
+Beyond the immediate cosmetic improvement, a brighter smile often encourages better oral hygiene habits, as people tend to take more pride in their clean, white teeth." />
+          <ServiceCard title="Paediatric Dentistry" description="Specialized gentle dental care for children, focusing on prevention, early intervention, and positive dental experiences.
+Paediatric dentistry is a specialized field dedicated to the oral health of children from infancy through their teenage years, providing comprehensive dental care that is tailored to their unique needs. 
+This includes a wide range of services from routine check-ups and cleanings to fillings, fluoride treatments, and preventative care.
+Our team is specifically trained to work with children, creating a positive and welcoming environment that sets them up for a lifetime of healthy dental habits.
+The American Academy of Paediatric Dentistry recommends that a child's first dental visit should occur when their first tooth appears, or no later than their first birthday. 
+After that, regular bi-annual check-ups are essential to monitor their oral development, prevent cavities, and address any potential issues early.
+Paediatric dentistry is crucial for addressing the specific dental concerns of children, from thumb-sucking habits and baby teeth to the eruption of permanent teeth.Early and consistent paediatric dental care is vital for establishing excellent oral hygiene habits from a young age, preventing the development of cavities and gum disease. By catching dental problems early, we can often use simple, non-invasive treatments to correct issues before they become more serious.
+This specialized care not only ensures your child's teeth and jaws develop correctly, but also helps them build a positive and trusting relationship with dental visits, eliminating fear and anxiety for the future." />
+          <ServiceCard title="Orthodontics and clear aligners" description="Corrects misaligned teeth using braces or invisible aligners for improved function, hygiene, and smile aesthetics.
+Orthodontics is a specialized branch of dentistry focused on diagnosing, preventing, and correcting misaligned teeth and jaws, as well as irregular bite patterns.
+Through the use of various appliances, such as braces, clear aligners, and retainers, orthodontic treatment gradually and carefully moves teeth into their correct positions.
+This dedicated field is not just about aesthetics, but also about restoring proper oral function and promoting long-term dental health.You should consider orthodontic treatment if you have issues such as crooked or crowded teeth, gaps between teeth, or bite problems like overbites, underbites, or crossbites.
+These conditions can often lead to difficulty chewing, speech impediments, jaw pain, and uneven wear on your teeth.
+An orthodontic evaluation is recommended for children around age 7 to detect and address potential issues early, but it is never too late for adults to seek treatment to improve their smile and bite.
+Orthodontic treatment dramatically improves the appearance of your smile, boosting your self-confidence and providing a more balanced facial profile.
+Beyond cosmetics, a proper bite and aligned teeth make it easier to chew food, which aids in digestion, and simplify brushing and flossing, which reduces the risk of cavities and gum disease. 
+By correcting misalignments, orthodontics helps prevent future dental problems and ensures your teeth and jaw function properly for a healthier, more comfortable life." />
+          <ServiceCard title="Laser-assisted surgeries" description="Minimally invasive laser treatments offering reduced pain, faster healing, and high precision.
+Laser assisted surgeries in dentistry utilize highly focused light beams to perform a variety of precise procedures on both soft and hard tissues in the mouth.
+This advanced technology allows for minimally invasive treatment, often replacing traditional drills or scalpels for certain dental work.
+Dental lasers can be used for procedures ranging from gum treatments and cavity preparations to complex oral surgeries, offering a modern alternative to conventional methods.
+You should consider laser assisted surgery if you require procedures such as gum reshaping, removal of soft tissue folds, treatment of gum disease, or precise removal of decayed tooth material. 
+It's often recommended for patients seeking a more comfortable and less invasive experience, or those who may have anxiety about traditional dental tools.
+Your dentist may also recommend it for specific soft tissue surgeries due to its precision and reduced healing time.
+Laser assisted surgeries offer numerous benefits, including reduced pain, minimal bleeding, and often no need for sutures, leading to a much faster and more comfortable recovery.
+The precision of lasers allows for the preservation of more healthy tooth structure and surrounding tissues, while also sterilizing the area to reduce the risk of infection.
+This advanced technology ultimately provides a more efficient, safer, and less anxiety-inducing dental experience for our patients." />
+          <ServiceCard title="Preventive dental care" description="Fluoride treatments and pit & fissure sealants to prevent decay, especially in children and high-risk patients.
+Pit and fissure sealants are materials used to protect deep grooves and depressions on teeth from cavities.
+They are applied to the chewing surfaces of back teeth where plaque and food easily get trapped.
+Sealants work by creating a physical barrier over the pits and fissures that prevents bacteria from entering and causing decay.
+Proper application requires cleaning, etching, and drying the tooth surface before precisely applying the sealant material.
+Sealants should be checked regularly and reapplied when worn down to continue protecting teeth from cavities in the pits and fissures." />
+          <ServiceCard title="Wisdom tooth extraction" description="Removes problematic molars to prevent pain and crowding.Wisdom tooth extraction is a common dental procedure involving the extraction of one or more of your wisdom teeth, which are the third and final set of molars that typically emerge in late adolescence or early adulthood.
+This procedure is often necessary when wisdom teeth become impacted (unable to emerge properly), grow in at an awkward angle, or cause overcrowding.
+The surgery is performed by an oral surgeon or dentist, often under local anesthesia or sedation, to ensure your comfort.
+You should consider wisdom tooth extraction if you experience pain, swelling, tenderness, or infection in the back of your mouth, or if you have difficulty opening your mouth fully.
+These symptoms often indicate that your wisdom teeth are impacted, are growing improperly, or are causing damage to adjacent teeth. 
+Proactive removal is also often recommended to prevent future problems like gum disease, tooth decay, cysts, or orthodontic issues before symptoms arise.Wisdom tooth extraction effectively alleviates pain and discomfort caused by impacted or problematic wisdom teeth, preventing recurring infections and inflammation.
+By removing these teeth, it protects surrounding healthy teeth from damage, decay, and shifting, thereby preserving your overall oral alignment and health.
+Ultimately, this procedure helps prevent more serious complications down the line, contributing to long-term oral comfort and a healthy, stable bite." />
+          <ServiceCard title="Cosmic dentistry" description="Brightens your smile by removing stains and discoloration.
+Teeth bleaching, also known as teeth whitening, is a popular cosmetic dental procedure designed to lighten the shade of your teeth and remove stains and discoloration. 
+This non-invasive treatment typically involves applying a professional-grade bleaching gel to the tooth surfaces, which penetrates the enamel to break down and lift away intrinsic and extrinsic stains.
+The result is a brighter, more radiant smile that enhances your overall appearance.You should consider teeth bleaching if your teeth have become discolored or stained over time due to factors such as coffee, tea, red wine, tobacco use, or simply the natural aging process.
+If you feel self-conscious about the shade of your teeth or desire a more vibrant smile for an upcoming special event, professional teeth bleaching can be an excellent option.
+It's ideal for individuals looking for a noticeable yet natural improvement in their smile's brightness.
+Professional teeth bleaching significantly improves the aesthetics of your smile by visibly lightening the shade of your teeth, often by several shades in a single session. 
+This procedure boosts your self-confidence by providing a brighter, more youthful appearance and can even make you look more approachable and professional.
+Beyond the immediate cosmetic improvement, a brighter smile often encourages better oral hygiene habits, as people tend to take more pride in their clean, white teeth." />
+          <ServiceCard title="Orthodontics" description="Corrects misaligned teeth and jaws for function and aesthetics.
+Orthodontics is a specialized branch of dentistry focused on diagnosing, preventing, and correcting misaligned teeth and jaws, as well as irregular bite patterns.
+Through the use of various appliances, such as braces, clear aligners, and retainers, orthodontic treatment gradually and carefully moves teeth into their correct positions.
+This dedicated field is not just about aesthetics, but also about restoring proper oral function and promoting long-term dental health.
+You should consider orthodontic treatment if you have issues such as crooked or crowded teeth, gaps between teeth, or bite problems like overbites, underbites, or crossbites. 
+These conditions can often lead to difficulty chewing, speech impediments, jaw pain, and uneven wear on your teeth.
+An orthodontic evaluation is recommended for children around age 7 to detect and address potential issues early, but it is never too late for adults to seek treatment to improve their smile and bite.
+Orthodontic treatment dramatically improves the appearance of your smile, boosting your self-confidence and providing a more balanced facial profile.
+Beyond cosmetics, a proper bite and aligned teeth make it easier to chew food, which aids in digestion, and simplify brushing and flossing, which reduces the risk of cavities and gum disease.
+By correcting misalignments, orthodontics helps prevent future dental problems and ensures your teeth and jaw function properly for a healthier, more comfortable life." />
+          <ServiceCard title="Clean aligners" description="Discreetly straighten teeth using custom, removable invisible trays.
+Clear aligners are a revolutionary orthodontic treatment that offers a discreet and comfortable alternative to traditional metal braces for straightening teeth.
+They consist of a series of custom-made, transparent, and removable plastic trays that gradually shift your teeth into their desired positions.
+Each aligner in the series is worn for a specific period before moving to the next, gently guiding your teeth over time.
+You should consider clear aligners if you have orthodontic issues such as crowded teeth, gaps between teeth, overbites, underbites, or crossbites, and prefer a less noticeable treatment option.
+They are an excellent choice for adults and teenagers who want to improve their smile aesthetics and oral health without the appearance and potential discomfort of traditional metal brackets and wires. 
+Clear aligners are suitable for many, but not all, cases of malocclusion.
+Clear aligners offer significant aesthetic and practical benefits, as they are virtually invisible, allowing you to straighten your teeth discreetly without drawing attention to your orthodontic treatment.
+Being removable, they make it easy to eat, brush, and floss normally, promoting better oral hygiene throughout your treatment period. 
+This modern approach to orthodontics leads to a beautifully aligned smile, improved bite function, and enhanced self-confidence with greater comfort compared to conventional braces." />
+          <ServiceCard title="Dentures" description="Replace missing teeth and restore comfort, function, and appearance.
+Dentures are removable prosthetic devices designed to replace missing teeth and the surrounding gum tissue, restoring your smile and the function of your mouth. 
+They are custom-made to fit comfortably in your mouth and are typically crafted from lifelike acrylic and sometimes metal, precisely molded to match your natural gum contours.
+Dentures can be either complete (replacing all teeth in an arch) or partial (replacing a few missing teeth while utilizing your remaining natural teeth).
+You should consider dentures if you have lost most or all of your natural teeth due to decay, gum disease, or trauma, and are looking for a reliable, removable solution to restore your chewing ability and appearance. Partial dentures are an option if you still have some healthy natural teeth remaining, helping to fill gaps and prevent existing teeth from shifting.
+Dentures are often a suitable choice for those seeking a cost-effective and non-surgical way to replace multiple missing teeth.Dentures significantly improve your ability to chew and speak clearly, allowing you to enjoy a wider variety of foods and communicate with confidence.
+They restore the natural contours of your face and support your facial muscles, preventing the sunken appearance that can occur with tooth loss and helping you look more youthful.
+Modern dentures are designed for comfort and aesthetics, offering a practical and effective way to regain a complete and functional smile, enhancing both your quality of life and self-esteem." />
+          <ServiceCard title="Composite Esthetic fillings" description="Esthetic composite fillings are tooth-colored, mercury-free restorations made from resin and glass particles, designed to blend seamlessly with natural enamel for a durable, minimally invasive, and visually appealing fix to cavities, chips, or gaps.
+These fillings bond directly to the tooth, requiring less drilling than amalgam, and last 5-10+ years with proper care.
+The dentist removes decay, cleans the area, applies a bonding agent, and places the composite in layers.
+A special blue light is used to cure (harden) the material quickly, allowing for immediate, functional use.
+Generally last between 7-10 years, though some may last longer depending on location, size, and oral hygiene.
+These restorations are highly recommended for patients looking for a more aesthetic, safe, and tooth-preserving alternative to traditional amalgam fillings." />
+          <ServiceCard title="Oral Mucosal diseases" description="Oral mucosal diseases are conditions affecting the mouth's lining, causing symptoms like painful sores, redness, blisters, or white patches, and stem from infections, autoimmune issues, allergies, or cancer treatments, with common examples including canker sores, oral lichen planus, and herpes, often requiring biopsy and specialized care from dermatologists or oral pathologists for accurate diagnosis and treatment. 
+Common Types Aphthous Stomatitis (Canker Sores): Recurrent, painful ulcers, very common. 
+Oral Lichen Planus (OLP): Chronic inflammatory condition, often white, lace-like patches.
+Herpes Simplex Virus (Cold Sores): Viral infection causing blisters, often around the lips.
+Pemphigus Vulgaris & Mucous Membrane Pemphigoid: Autoimmune blistering diseases. 
+Erythema Multiforme: Triggered by infections (like herpes) or drugs, causing target-like lesions. 
+Candidiasis (Thrush): Fungal infection, appearing as white patches.
+Causes Autoimmune: Immune system attacks the body's cells (e.g., Pemphigus, OLP). 
+Infections: Viral (herpes), fungal (candidiasis), bacterial (strep). 
+Trauma & Irritants: Injuries, certain foods, chemicals.
+Systemic Conditions: Lupus, underlying immune dysfunction.
+Cancer Treatments: Chemotherapy or radiation can cause mucositis (inflammation).
+Genetics & Allergies: Inherited factors or allergic reactions.
+Symptoms Painful sores, ulcers, blisters, erosions.
+Redness (erythema) or white patches (leukoplakia).
+Burning, itching, or tingling sensations. 
+Difficulty eating, swallowing, or speaking.
+Systemic symptoms like fever in severe cases (e.g., Erythema Multiforme).
+Diagnosis & Treatment Diagnosis: Often involves detailed history, visual inspection, and a biopsy (tissue sample) for definitive diagnosis.
+Treatment: Varies by cause; includes topical corticosteroids, antiviral/antifungal medications, immune suppressants (like corticosteroids, methotrexate), pain relievers, and addressing underlying triggers.
+Specialists: Dermatologists, oral pathologists, and oral medicine specialists manage these conditions." />
+<ServiceCard title="" description="" />
+<ServiceCard title="" description="" />
+<ServiceCard title="" description="" />
+        </div>
+      </section>
+      {}
+      <section className="bg-light py-5">
+        <div className="container text-center">
+          <h2 className="mb-4">Book an Appointment</h2>
+          <form
+            onSubmit={handleBooking}
+            className="d-flex flex-column align-items-center gap-3"
+          >
+            <input
+              type="text"
+              className="form-control w-50"
+              placeholder="Your Name"
+              required
+              onChange={(e) =>
+                setAppointment({ ...appointment, name: e.target.value })
+              }
+            />
+            <input
+              type="date"
+              className="form-control w-50"
+              required
+              onChange={(e) =>
+                setAppointment({ ...appointment, date: e.target.value })
+              }
+            />
+            <button type="submit" className="btn btn-success px-4">
+              Book Now
+            </button>
+          </form>
+        </div>
+      </section>
+      {}
+      <footer className="bg-dark text-white text-center py-3">
+        <p className="mb-0">
+          📍 411061, Pimple gurav,nasik phata,javalkar nagar, Pune | 📞 +91
+          9511278991 | +91 8999989778
+        </p>
+      </footer>
+    </div>
+  );
+}
+export default App;
