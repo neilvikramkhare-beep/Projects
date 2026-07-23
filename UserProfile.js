@@ -1,17 +1,13 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
-const UserProfile = () => {
-  const { user, theme, toggleTheme } = useContext(AppContext);
+import React from "react";
+
+function UserProfile({ name, age }) {
   return (
-    <div className={`card mt-3 ${theme === "dark" ? "bg-dark text-white" : ""}`}>
-      <div className="card-body">
-        <h4>User Profile</h4>
-        <p>Username: {user}</p>
-        <button className="btn btn-primary" onClick={toggleTheme}>
-          Toggle Theme
-        </button>
-      </div>
+    <div className="card p-3 mb-3">
+      <h4>User Profile</h4>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
     </div>
   );
-};
+}
+
 export default UserProfile;

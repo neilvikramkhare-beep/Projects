@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import Header from "./Header";
+import UserCard from "./UserCard";
+import UserProfile from "./UserProfile";
+import UserStats from "./UserStats";
+import UserActions from "./UserActions";
+import UserList from "./UserList";
 
 function App() {
+  const [user, setUser] = useState({
+    name: "John Doe",
+    age: 25
+  });
+
+  const updateAge = () => {
+    setUser({
+      ...user,
+      age: user.age + 1
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-4">
+      <Header />
+
+      <UserCard
+        name={user.name}
+        age={user.age}
+      />
+
+      <UserProfile
+        name={user.name}
+        age={user.age}
+      />
+
+      <UserStats age={user.age} />
+
+      <UserActions updateAge={updateAge} />
+
+      <UserList />
     </div>
   );
 }

@@ -1,14 +1,14 @@
 import React from "react";
-function UserStats({ clicks }) {
-    return (
-        <div className="card text-center shadow mb-3">
-            <div className="card-body">
-                <h5 className="card-title">User Stats</h5>
-                <p className="card-text">
-                    <strong>Button Clicks:</strong> {clicks}
-                </p>
-            </div>
-        </div>
-    );
+
+function UserStats({ age }) {
+  return (
+    <div className="card p-3 mb-3">
+      <h4>User Statistics</h4>
+      <p>
+        Status: {age >= 18 ? "Adult" : "Minor"}
+      </p>
+    </div>
+  );
 }
+
 export default UserStats;
