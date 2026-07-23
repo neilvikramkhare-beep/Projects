@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Clinic Management System</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      h2 {
+        text-align: center;
+      }
+      input,
+      button {
+        margin: 5px;
+        padding: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: white;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Clinic Management System</h2>
+    <div>
+      <input type="text" id="name" placeholder="Patient Name" />
+      <input type="number" id="age" placeholder="Age" />
+      <input type="text" id="phone" placeholder="Phone Number" />
+      <input type="text" id="timing" placeholder="Timing" />
+      <input type="date" id="date" />
+      <input type="text" id="day" placeholder="Day" />
+      <input type="number" id="payment" placeholder="Payment Remaining" />
+      <button onclick="addPatient()">Add Patient</button>
+    </div>
+    <div>
+      <input type="text" id="searchName" placeholder="Search Patient" />
+      <button onclick="searchPatient()">Search</button>
+      <input type="text" id="updateName" placeholder="Update Patient" />
+      <input type="number" id="newPayment" placeholder="New Payment" />
+      <button onclick="updatePayment()">Update Payment</button>
+      <input type="text" id="deleteName" placeholder="Delete Patient" />
+      <button onclick="deletePatient()">Delete</button>
+      <button onclick="sortByPayment()">Sort by Payment</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Timing</th>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Payment Remaining</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <script>
+      let database = [];
+      function renderTable(data = database) {
+        let table = document.getElementById("tableBody");
+        table.innerHTML = "";
+        data.forEach((patient) => {
+          let row = `<tr>
+            <td>${patient.name}</td>
+            <td>${patient.age}</td>
+            <td>${patient.phone}</td>
+            <td>${patient.timing}</td>
+            <td>${patient.date}</td>
+            <td>${patient.day}</td>
+            <td>${patient.payment}</td>
+          </tr>`;
+          table.innerHTML += row;
+        });
+      }
+      function addPatient() {
+        let patient = {
+          name: document.getElementById("name").value,
+          age: document.getElementById("age").value,
+          phone: document.getElementById("phone").value,
+          timing: document.getElementById("timing").value,
+          date: document.getElementById("date").value,
+          day: document.getElementById("day").value,
+          payment: parseInt(document.getElementById("payment").value),
+        };
+        database.push(patient);
+        renderTable();
+      }
+      function searchPatient() {
+        let name = document.getElementById("searchName").value.toLowerCase();
+        let result = database.filter((p) => p.name.toLowerCase() === name);
+        renderTable(result);
+      }
+      function updatePayment() {
+        let name = document.getElementById("updateName").value.toLowerCase();
+        let newPayment = parseInt(document.getElementById("newPayment").value);
+        database.forEach((p) => {
+          if (p.name.toLowerCase() === name) {
+            p.payment = newPayment;
+          }
+        });
+        renderTable();
+      }
+      function deletePatient() {
+        let name = document.getElementById("deleteName").value.toLowerCase();
+        database = database.filter((p) => p.name.toLowerCase() !== name);
+        renderTable();
+      }
+      function sortByPayment() {
+        database.sort((a, b) => a.payment - b.payment);
+        renderTable();
+      }
+    </script>
+  </body>
+</html>

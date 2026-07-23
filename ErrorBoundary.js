@@ -1,22 +1,19 @@
-import React, { Component } from "react";
-class ErrorBoundary extends Component {
+import React from "react";
+class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError() {
+  static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, info) {
-    console.log("Error caught:", error, info);
+    console.log("Error:", error);
+    console.log("Info:", info);
   }
   render() {
     if (this.state.hasError) {
-      return (
-        <div className="alert alert-danger">
-          Something went wrong in this component.
-        </div>
-      );
+      return <h2>Something went wrong.</h2>;
     }
     return this.props.children;
   }

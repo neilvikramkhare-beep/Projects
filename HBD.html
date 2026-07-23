@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday to my best Daddy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+        background: linear-gradient(135deg, #001233, #003566, #001d3d);
+        color: white;
+      }
+      .stars {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        overflow: hidden;
+      }
+      .star {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: white;
+        border-radius: 50%;
+        animation: twinkle 4s infinite;
+      }
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.2;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .balloon {
+        position: absolute;
+        bottom: -200px;
+        width: 90px;
+        animation: float 15s infinite linear;
+      }
+      .balloon:before {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 110px;
+        border-radius: 50%;
+      }
+      .balloon:after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100px;
+        background: white;
+        left: 44px;
+        top: 100px;
+      }
+      .red:before {
+        background: #ff4d6d;
+      }
+      .blue:before {
+        background: #4dabf7;
+      }
+      .yellow:before {
+        background: #ffd60a;
+      }
+      .green:before {
+        background: #38d39f;
+      }
+      .balloon1 {
+        left: 5%;
+        animation-duration: 14s;
+      }
+      .balloon2 {
+        left: 25%;
+        animation-duration: 18s;
+      }
+      .balloon3 {
+        left: 55%;
+        animation-duration: 16s;
+      }
+      .balloon4 {
+        left: 80%;
+        animation-duration: 20s;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-140vh) rotate(360deg);
+        }
+      }
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+        position: relative;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        max-width: 850px;
+        animation: fadeIn 2s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero h1 {
+        font-size: 5rem;
+        font-weight: 800;
+        background: linear-gradient(to right, #ffd60a, #ff4d6d, #4dabf7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 2s infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        to {
+          text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+        }
+      }
+      .hero h2 {
+        margin-top: 10px;
+        font-size: 2rem;
+        color: #ffffff;
+      }
+      .hero p {
+        margin-top: 25px;
+        line-height: 1.8;
+        font-size: 1.2rem;
+        color: #e0e0e0;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 35px;
+        padding: 15px 35px;
+        background: linear-gradient(45deg, #ff4d6d, #ffbe0b);
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.4s;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #ffbe0b;
+      }
+      .memories {
+        padding: 80px 30px;
+        text-align: center;
+      }
+      .memories h2 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+      }
+      .memory-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+      .memory-card {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 30px;
+        border-radius: 20px;
+        transition: 0.4s;
+        backdrop-filter: blur(10px);
+      }
+      .memory-card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      }
+      .memory-card h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        color: #ffd60a;
+      }
+      footer {
+        text-align: center;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.3);
+        margin-top: 60px;
+      }
+      footer p {
+        color: #ddd;
+      }
+      .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: red;
+        top: -10px;
+        animation: confettiFall linear infinite;
+        z-index: -1;
+      }
+      @keyframes confettiFall {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        100% {
+          transform: translateY(120vh) rotate(720deg);
+        }
+      }
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+        .hero h2 {
+          font-size: 1.4rem;
+        }
+        .card {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars" id="stars"></div>
+    <div class="balloon balloon1 red"></div>
+    <div class="balloon balloon2 blue"></div>
+    <div class="balloon balloon3 yellow"></div>
+    <div class="balloon balloon4 green"></div>
+    <section class="hero">
+      <div class="card">
+        <h1>Happy Birthday Dad 🎉</h1>
+        <h2>You Are My Hero ❤️</h2>
+        <p>
+          Thank you for always guiding me, supporting me, and filling life with
+          love and happiness. You are not just my father — you are my
+          inspiration, my strength, and my best friend.
+        </p>
+        <a href="#" class="btn">Love You Dad 💖</a>
+      </div>
+    </section>
+    <section class="memories">
+      <h2>Beautiful Memories ✨</h2>
+      <div class="memory-grid">
+        <div class="memory-card">
+          <h3>👨‍👦 Childhood</h3>
+          <p>
+            Thank you for teaching me how to walk, dream, and believe in myself.
+          </p>
+        </div>
+        <div class="memory-card">
+          <h3>🚗 Adventures</h3>
+          <p>Every trip with you became a beautiful memory forever.</p>
+        </div>
+        <div class="memory-card">
+          <h3>💡 Inspiration</h3>
+          <p>Your hard work and kindness always motivate me every day.</p>
+        </div>
+        <div class="memory-card">
+          <h3>❤️ Family Love</h3>
+          <p>You are the heart of our family and the reason for our smiles.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Made with ❤️ for the World's Best Dad</p>
+    </footer>
+    <script>
+      const stars = document.getElementById("stars");
+      for (let i = 0; i < 200; i++) {
+        let star = document.createElement("div");
+        star.classList.add("star");
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+        star.style.animationDuration = Math.random() * 3 + 2 + "s";
+        stars.appendChild(star);
+      }
+      for (let i = 0; i < 100; i++) {
+        let confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        document.body.appendChild(confetti);
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.background = `hsl(${Math.random() * 360},100%,50%)`;
+        confetti.style.width = confetti.style.height =
+          Math.random() * 8 + 5 + "px";
+        confetti.style.animationDuration = Math.random() * 5 + 5 + "s";
+        confetti.style.opacity = Math.random();
+      }
+    </script>
+  </body>
+</html>

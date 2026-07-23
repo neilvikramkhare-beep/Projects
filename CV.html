@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #dfe6ee;
+        padding: 30px;
+      }
+
+      .cv-container {
+        width: 1100px;
+        margin: auto;
+        background: white;
+        display: flex;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      /* LEFT SIDE */
+
+      .left {
+        width: 33%;
+        background: linear-gradient(180deg, #021b3a, #00112b);
+        color: white;
+        padding: 40px 30px;
+      }
+
+      .profile-logo {
+        width: 120px;
+        height: 120px;
+        border: 3px solid #2196f3;
+        border-radius: 20px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 55px;
+        color: #2196f3;
+        margin-bottom: 30px;
+      }
+
+      .section {
+        margin-top: 35px;
+      }
+
+      .section h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #4da3ff;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 8px;
+      }
+
+      .contact p {
+        margin: 12px 0;
+        font-size: 14px;
+      }
+
+      .skill {
+        margin-bottom: 18px;
+      }
+
+      .skill span {
+        font-size: 14px;
+      }
+
+      .bar {
+        width: 100%;
+        height: 8px;
+        background: #16345f;
+        border-radius: 20px;
+        margin-top: 6px;
+      }
+
+      .fill {
+        height: 100%;
+        background: #2196f3;
+        border-radius: 20px;
+      }
+
+      /* RIGHT SIDE */
+
+      .right {
+        width: 67%;
+        padding: 50px;
+        position: relative;
+      }
+
+      .name {
+        font-size: 52px;
+        font-weight: 700;
+        color: #0a2b5e;
+        line-height: 60px;
+      }
+
+      .title {
+        font-size: 22px;
+        color: #2196f3;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
+
+      .summary {
+        font-size: 15px;
+        color: #555;
+        line-height: 28px;
+        margin-bottom: 40px;
+      }
+
+      .right-section {
+        margin-bottom: 35px;
+      }
+
+      .right-section h2 {
+        color: #0a2b5e;
+        font-size: 26px;
+        margin-bottom: 20px;
+        border-left: 6px solid #2196f3;
+        padding-left: 12px;
+      }
+
+      .job {
+        margin-bottom: 25px;
+      }
+
+      .job h3 {
+        color: #222;
+        font-size: 20px;
+      }
+
+      .job span {
+        color: #2196f3;
+        font-size: 14px;
+      }
+
+      .job p {
+        margin-top: 10px;
+        color: #555;
+        line-height: 26px;
+        font-size: 14px;
+      }
+
+      .project {
+        margin-bottom: 20px;
+      }
+
+      .project h3 {
+        color: #222;
+        font-size: 18px;
+      }
+
+      .project p {
+        color: #666;
+        margin-top: 8px;
+        line-height: 24px;
+        font-size: 14px;
+      }
+
+      .education p,
+      .certifications p {
+        margin: 10px 0;
+        color: #555;
+      }
+
+      .tech-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .tech {
+        padding: 10px 18px;
+        background: #0a2b5e;
+        color: white;
+        border-radius: 12px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .tech:hover {
+        background: #2196f3;
+        transform: translateY(-3px);
+      }
+
+      .graphics {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, #2196f3, #0a2b5e);
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
+        opacity: 0.1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cv-container">
+      <!-- LEFT -->
+      <div class="left">
+        <div class="profile-logo">&lt;/&gt;</div>
+
+        <div class="section contact">
+          <h2>Contact</h2>
+          <p>📞 +91 9468945408</p>
+          <p>📧 neilvikramkhare@gmail.com</p>
+          <p>📍 Pune, India</p>
+          <p>🌐 https://github.com/neilvikramkhare</p>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="graphics"></div>
+
+        <div class="name">Neil Vikram Khare</div>
+
+        <div class="title">COMPUTER ENGINEER</div>
+
+        <div class="summary">
+          Passionate Computer Engineer with strong skills in software
+          development, system architecture, problem solving, and AI-based
+          applications. Experienced in creating scalable and efficient solutions
+          using modern technologies.
+        </div>
+
+        <div class="right-section">
+          <h2>Experience</h2>
+          <div class="job">
+            <h3>Integrated Btech Engineer second year student</h3>
+            <span>MITWPU | 2025 - Present</span>
+            <p>
+              Developed scalable web applications and integrated APIs using
+              Python,C++,C,HTML,CSS,JavaScript,SQL,React,Bootstrap and Node.js.
+              Optimized backend performance and improved UI functionality.
+            </p>
+          </div>
+
+          <div class="job">
+            <h3>Freelance Developer</h3>
+            <span>Self Employed | 2023 - 2025</span>
+
+            <p>
+              Designed responsive websites, automation tools, and desktop
+              applications for clients using Python and web technologies.
+            </p>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <h3>NeilOS Operating System UI</h3>
+            <p>
+              Created a graphical Python-based desktop operating system
+              simulation with many apps like terminal,file manager,networking
+              app,cyber app,chat app, a notes app,database app with full
+              database operations,games app, calculator etc and many more with
+              true multitasking support.
+            </p>
+          </div>
+
+          <div class="project">
+            <h3>Database Application</h3>
+            <p>
+              I have created a database application with full database
+              operations like Select, Insert, Update, Delete etc using
+              python,sql and html.
+            </p>
+          </div>
+
+          <div class="project">
+            <h3>Smart Web Dashboard</h3>
+            <p>
+              Developed a responsive analytics dashboard with databases, network
+              apps,cyber security apps and many more tools, API integrations,
+              and authentication system.
+            </p>
+          </div>
+        </div>
+
+        <div class="right-section education">
+          <h2>Education</h2>
+
+          <p><strong>Integrated B.Tech in Computer Engineering</strong></p>
+          <p>MITWPU,pune | 2024 - 2026</p>
+          <p>CGPA: 8.4 / 10</p>
+        </div>
+      </div>
+    </div>
+    <div class="right-section certifications">
+      <h2>Certifications</h2>
+      <p>Python-Apna College</p>
+      <p>Java-Apna College</p>
+      <p>C++-pregrad</p>
+      <p>AI and Machine Learning-Coursera</p>
+      <p>DSA-Skill Up</p>
+      <p>Python,C,C++,DSA,SQL,Java-hackerrank</p>
+      <p>TryHackMe Labs-Cyber Security</p>
+    </div>
+    <div class="section">
+      <h2>Skills</h2>
+
+      <div class="skill">
+        <span>Python</span>
+        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+        <p>
+          I have worked on python projects from basic scripting to advanced web
+          development using frameworks like Django and Flask. My projects range
+          from simple automation scripts to complex web applications with
+          database integration and user authentication.I have used python as a
+          backend language for my NeilOS project. I have mastered python
+          frameworks like
+          Django,Flask,FastAPI,CherryPy,Tkinter,PyQT,Bottle,SQLite etc.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>C++</span>
+        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+        <p>
+          I have worked on C++ projects from basic to my crow network
+          application.I have mastered C++ and have worked on projects involving
+          object oriented programming,data structures and algorithms,GUI
+          applications,only C++ database with all SQL operations performed in it
+          like Select, Insert, Update, Delete etc.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+        <p>
+          I have worked on JavaScript projects from basic scripting to advanced
+          web development using frameworks like Django and Flask. My projects
+          range from simple automation scripts to complex web applications with
+          database integration and user authentication.I have used JavaScript as
+          a backend language for my NeilOS project. I have mastered JavaScript
+          frameworks like HTML,CSS,BootStrap,Node.js,React.js etc.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>HTML/CSS</span>
+        <div class="bar"><div class="fill" style="width: 92%"></div></div>
+        <p>
+          I have worked on HTML/CSS projects from basic scripting to advanced
+          web development using frameworks like Flask. My projects range from
+          simple automation scripts to complex web applications with database
+          integration and user authentication.I have used HTML/CSS as a frontend
+          language for my NeilOS project,Khare Dental home website,Crow
+          network,Database application,Redux Thunk App. I have mastered HTML/CSS
+          frameworks like BootStrap etc.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>SQL</span>
+        <div class="bar"><div class="fill" style="width: 78%"></div></div>
+        <p>
+          I have worked on SQL projects from basic to advanced level. I have
+          used SQL as a backend language for my Database application,NeilOS
+          database,chat application database with python and html as well. I
+          have mastered SQL frameworks like SQLite,MySQL,Oracle,Shell etc.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>C</span>
+        <div class="bar"><div class="fill" style="width: 88%"></div></div>
+        <p>
+          I have written my NeilOS Kernel in C language. I have mastered C
+          language.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>Java</span>
+        <div class="bar"><div class="fill" style="width: 84%"></div></div>
+        <p>
+          I have worked on Java projects from basic to advanced level. I have
+          used Java as a backend language for my projects. I have mastered Java
+          frameworks like Spring, Hibernate, JavaFX, Gradle, Android, Rest controller, Request mapping etc. I have created a NeoController
+          which controls the app backend of my NeilOS project. I am familiar with Java GUI frameworks like Swing and 
+          JavaFX for building desktop applications.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>ReactJS + Bootstrap</span>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+        <p>
+          I have worked with various ReactJS and Bootstrap projects, creating responsive and dynamic web applications. 
+          I have experience in building single-page applications (SPAs) with ReactJS, utilizing components, state management, and routing. 
+          I have also integrated Bootstrap for styling and layout, ensuring a seamless user experience across different devices.
+          I have mastered React Native, MongoDB and ReactJS frameworks like Redux, React Router, Material-UI, Ant Design, and many more.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span>Tools</span>
+        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+        <p>
+          VS Code Git Kali Linux and Linux Mint MySQL TensorFlow AI and ML Gradle Maven Spring Boot MongoDB Metasploit framework.
+          Antigravity ParrotOS Ubuntu Raspberry Pi OS Oracle and Shell Metasploit Wireshark Nmap Burp Suite and many more.
+         </p>
+      </div>
+    </div>
+  </body>
+</html>
